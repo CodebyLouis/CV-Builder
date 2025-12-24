@@ -4,6 +4,7 @@ import CVPreview from "./components/CVPreview";
 import { useState } from "react";
 import WorkExperience from "./components/WorkExperience";
 import Education from "./components/Education";
+import Skill from "./components/Skill";
 
 function App() {
   const [generalInfo, setGeneralInfo] = useState({
@@ -15,6 +16,7 @@ function App() {
 
   const [workExperience, setWorkExperience] = useState([]);
   const [education, setEducation] = useState([]);
+  const [skill, setSkill] = useState([]);
 
   return (
     <main>
@@ -24,12 +26,14 @@ function App() {
         <div className="builder">
           <GeneralInfo data={generalInfo} setData={setGeneralInfo} />
           <WorkExperience data={workExperience} setData={setWorkExperience} />
-          <Education />
+          <Education data={education} setData={setEducation} />
+          <Skill data={skill} setData={setSkill} />
         </div>
         <div className="cv-viewer">
           <CVPreview
             generalInfo={generalInfo}
             workExperience={workExperience}
+            education={education}
           />
         </div>
       </div>

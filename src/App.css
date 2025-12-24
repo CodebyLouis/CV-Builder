@@ -1,3 +1,7 @@
+:root{
+  
+}
+
 main{
   padding:40px;
 }
@@ -25,5 +29,11 @@ form label{
 .cv-viewer{
   background-color: white;
   color: black;
-
 }
+
+.delete-btn {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+
